@@ -18,8 +18,8 @@ public class JavaApplication1 {
      */
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         
-       Class.forName("oracle.jdbc.driver.OracleDriver");
-       Connection con = DriverManager.getConnection("jdbc:oracle:thin:toru_dbms@//localhost:1521/xe","toru_dbms","123");
+       Class.forName("oracle.jdbc.driver.OracleDriver"); //driver connection
+       Connection con = DriverManager.getConnection("jdbc:oracle:thin:toru_dbms@//localhost:1521/xe","toru_dbms","123");//connection string user and password
     Statement st = con.createStatement();
     ResultSet rs = st.executeQuery("select * from account");
     System.out.println("A_ID"+"   "+"A_TYPE"+"    "+"C_ID");
